@@ -25,7 +25,7 @@ const getWeatherInfo = async (userInput) => {
       windSpeed,
     }
   } catch (error) {
-    console.error("ERROR: FETCHING DATAS FROM API")
+    console.error("ERROR: FAILED FETCHING DATAS FROM API")
     throw error
   }
 }
