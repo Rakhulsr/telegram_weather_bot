@@ -3,11 +3,11 @@ const { getWeatherInfo } = require("./getWeather.js")
 const sendInfoMsg = async (userInput) => {
   const wData = await getWeatherInfo(userInput)
 
-  const msg = `🏢 Kota: ${wData.cityName}\n🌦️ Cuaca: ${
+  const msg = `🏢 City: ${wData.cityName}\n🌦️ Weather: ${
     wData.weather
-  }\n🌡️ Suhu: ${wData.temperature.toFixed(2)}°C.\nDetail :\nKelembapan : ${
+  }\n🌡️ Temperature: ${wData.temperature.toFixed(2)}°C.\nDetail :\nHumidity : ${
     wData.humidity
-  }%\nTekanan : ${wData.pressure}hPa\nKecepatan Angin: ${wData.windSpeed}m/s.`
+  }%\nPressure : ${wData.pressure}hPa\nWind Speed: ${wData.windSpeed}m/s.`
   return msg
 }
 
