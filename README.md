@@ -87,5 +87,3 @@ Before running the bot, ensure that you have the following:
 - `README.md` - Project documentation
 
 ---
-
-This version should now be clearer and more accessible for anyone looking to use the bot!
