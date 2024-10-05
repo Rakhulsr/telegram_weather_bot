@@ -1,45 +1,45 @@
 # Telegram Weather Bot
 
-
 [DEMO](https://t.me/lala_lulu_bot)
-## Deskripsi
 
-Telegram Weather Bot adalah bot Telegram yang memberikan informasi cuaca terkini berdasarkan nama kota yang dimasukkan oleh pengguna. Bot ini menggunakan API OpenWeather untuk mendapatkan data cuaca dan berjalan di atas Node.js dengan Express.
+## Description
 
-## Fitur
+The Telegram Weather Bot is a Telegram bot that provides real-time weather information based on the city name input by the user. This bot uses the OpenWeather API to fetch weather data and is built on Node.js with Express.
 
-- Menerima nama kota dari pengguna
-- Mengambil data cuaca dari OpenWeather API
-- Mengirimkan informasi cuaca terkini ke pengguna
-- Menyediakan beberapa perintah dasar seperti `/start`, `/help`, dan `/stop`
+## Features
 
-## Prasyarat
+- Accepts city name from users
+- Fetches weather data from the OpenWeather API
+- Sends real-time weather updates to users
+- Offers basic commands like `/start`, `/help`, and `/stop`
 
-Sebelum menjalankan bot, pastikan Anda telah memenuhi prasyarat berikut:
+## Prerequisites
 
-- [Node.js](https://nodejs.org/) versi 14 atau yang lebih baru
-- [npm](https://www.npmjs.com/) untuk mengelola dependensi
-- Token bot Telegram (dapatkan dari [BotFather](https://core.telegram.org/bots#botfather))
-- API Key OpenWeather (daftar di [OpenWeather](https://home.openweathermap.org/users/sign_up))
+Before running the bot, ensure that you have the following:
 
-## Instalasi
+- [Node.js](https://nodejs.org/) version 14 or higher
+- [npm](https://www.npmjs.com/) for managing dependencies
+- A Telegram bot token (Get it from [BotFather](https://core.telegram.org/bots#botfather))
+- OpenWeather API Key (Sign up at [OpenWeather](https://home.openweathermap.org/users/sign_up))
 
-1. **Clone repositori**
+## Installation
+
+1. **Clone the repository**
 
    ```bash
    git clone https://github.com/Rakhulsr/telegram_weather_bot.git
    cd telegram_weather_bot
    ```
 
-2. **Instal dependensi**
+2. **Install dependencies**
 
    ```bash
    npm install
    ```
 
-3. **Konfigurasi**
+3. **Configure the bot**
 
-   Buat file `.env` di direktori proyek dan tambahkan konfigurasi berikut:
+   Create a `.env` file in the project directory with the following content:
 
    ```env
    MY_TOKEN=your_telegram_bot_token
@@ -47,42 +47,45 @@ Sebelum menjalankan bot, pastikan Anda telah memenuhi prasyarat berikut:
    PORT=3000
    ```
 
-   Gantilah `your_telegram_bot_token` dan `your_openweather_api_key` dengan token bot Telegram dan API key OpenWeather Anda. Anda dapat mengganti port jika diperlukan.
+   Replace `your_telegram_bot_token` with your Telegram bot token and `your_openweather_api_key` with your OpenWeather API key. You can also change the `PORT` if necessary.
 
-## Penggunaan
+## Usage
 
-1. **Jalankan bot**
+1. **Run the bot**
 
-   Untuk menjalankan bot dalam mode pengembangan dengan pemantauan perubahan otomatis, gunakan:
+   To run the bot in development mode with automatic file change monitoring:
 
    ```bash
    npm run dev
    ```
 
-   Untuk menjalankan bot dalam mode produksi, gunakan:
+   To run the bot in production mode:
 
    ```bash
    npm start
    ```
 
-2. **Berinteraksi dengan bot**
+2. **Interact with the bot**
 
-   - Kirimkan nama kota ke bot Anda di Telegram.
-   - Bot akan mengirimkan informasi cuaca terkini untuk kota yang diminta.
+   - Send a city name to your bot on Telegram.
+   - The bot will reply with the current weather information for that city.
 
-   Beberapa perintah yang tersedia:
+   Available commands:
 
-   - `/start` - Masukkan nama kota untuk mendapatkan informasi cuaca.
-   - `/help` - Menampilkan panduan penggunaan bot.
-   - `/stop` - Menyetop interaksi dengan bot.
+   - `/start` - Prompt to input a city name to get weather information.
+   - `/help` - Display usage instructions for the bot.
+   - `/stop` - Stop interacting with the bot.
 
-## Struktur Proyek
+## Project Structure
 
-- `index.js` - Script utama yang menjalankan bot
-- `controller/sendInfoMsg.js` - Mengambil informasi cuaca dan mengformat pesan
-- `utils/command.js` - Menyediakan perintah-perintah yang tersedia untuk bot
-- `package.json` - Daftar dependensi dan skrip npm
-- `package-lock.json` - Kunci dependensi proyek
-- `.env` - File konfigurasi (tidak termasuk dalam repositori)
-- `README.md` - Dokumentasi proyek
+- `index.js` - Main script that runs the bot
+- `controller/sendInfoMsg.js` - Fetches weather data and formats the message
+- `utils/command.js` - Defines available commands for the bot
+- `package.json` - Contains project dependencies and npm scripts
+- `package-lock.json` - Dependency lock file
+- `.env` - Configuration file (excluded from version control)
+- `README.md` - Project documentation
 
+---
+
+This version should now be clearer and more accessible for anyone looking to use the bot!
